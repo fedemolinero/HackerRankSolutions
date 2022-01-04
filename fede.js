@@ -1,20 +1,19 @@
-import foo, * as bar from './baz.js';
+function filterNumbersFromArray(arr) {
 
-function Candidate(name, age, stream, grad, school) {
-    this.name = name;
-    this.age = age;
-    this.stream = stream
-    this.grad = grad;
-    this.display = function (p) {
-        console.log("first name" + p.name.firstName);
-        console.log('age' + p.age)
-        console.log('stream' + p.stream)
-        console.log('sch' + p.school.name)
-        console.log('grad' + p.grad)
+    arr.forEach(element => {
 
-    }
+        if (typeof element != 'number') {
+            arr.filter(element)
+        }
+
+    });
+
 }
 
+var arr = [1, 'a', 'b', 2];
 
-const ob = new Candidate("Ashley", 21, "Science", "btech", "st. Jones");
-ob.display(ob)
+arr = filterNumbersFromArray(arr);
+
+console.log(arr);
+
+
